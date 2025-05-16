@@ -1,0 +1,167 @@
+{% extends 'base.html' %}
+
+{% block title %}Accueil - Kindom{% endblock %}
+
+{% block content %}
+<div class="row">
+    <!-- Présentation générale -->
+    <div class="col-12 mb-4">
+        <div class="alert alert-primary text-center shadow-sm">
+            <h1 class="display-5 mb-3">Plateforme de kinésithérapie à domicile</h1>
+            <p class="lead mb-0">Kindom vous permet de demander un kinésithérapeute à domicile, de poser vos questions à des professionnels, de consulter des conseils santé, et d'acheter du matériel de kinésithérapie en ligne.</p>
+        </div>
+    </div>
+
+    <!-- Nos Services -->
+    <div class="col-12 mb-5">
+        <h2 class="text-center mb-4">Nos Services</h2>
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-4">
+                <div class="card h-100 text-center border-0 shadow-sm">
+                    <div class="card-body">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Questions gratuites" width="60" class="mb-3">
+                        <h3 class="card-title">Questions aux kinés</h3>
+                        <p class="card-text">Posez gratuitement vos questions à nos kinésithérapeutes et recevez des réponses personnalisées.</p>
+                        <a href="#" class="btn btn-outline-primary">Poser une question</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 text-center border-0 shadow-sm">
+                    <div class="card-body">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135712.png" alt="Conseils santé" width="60" class="mb-3">
+                        <h3 class="card-title">Conseils santé & Blog</h3>
+                        <p class="card-text">Lisez et partagez des conseils médicaux simples rédigés par nos kinésithérapeutes.</p>
+                        <a href="{% url 'blog:article_list' %}" class="btn btn-primary">Lire le blog</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nos Kinésithérapeutes -->
+    <div class="col-12 mb-5">
+        <h2 class="text-center mb-4">Nos Kinésithérapeutes Qualifiés</h2>
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-4">
+                <div class="card h-100 text-center border-0 shadow-sm">
+                    <div class="card-body">
+                        <img src="/static/images/kine1.jpg" alt="Dr. Ahmed" class="rounded-circle mb-3" style="width: 120px; height: 120px; object-fit: cover;">
+                        <h3 class="card-title">د. أحمد بن علي</h3>
+                        <p class="text-muted">Dr. Ahmed Ben Ali</p>
+                        <p class="card-text">
+                            <strong>Spécialité:</strong> Rééducation sportive<br>
+                            <strong>Expérience:</strong> 15 ans<br>
+                            <strong>Diplômes:</strong> Doctorat en kinésithérapie sportive
+                        </p>
+                        <a href="{% url 'appointments:list' %}" class="btn btn-primary">Prendre RDV</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 text-center border-0 shadow-sm">
+                    <div class="card-body">
+                        <img src="/static/images/kine2.jpg" alt="Dr. Fatima" class="rounded-circle mb-3" style="width: 120px; height: 120px; object-fit: cover;">
+                        <h3 class="card-title">د. فاطمة الزهراء</h3>
+                        <p class="text-muted">Dr. Fatima Zahra</p>
+                        <p class="card-text">
+                            <strong>Spécialité:</strong> Kinésithérapie pédiatrique<br>
+                            <strong>Expérience:</strong> 12 ans<br>
+                            <strong>Diplômes:</strong> Master en rééducation pédiatrique
+                        </p>
+                        <a href="{% url 'appointments:list' %}" class="btn btn-primary">Prendre RDV</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 text-center border-0 shadow-sm">
+                    <div class="card-body">
+                        <img src="/static/images/kine3.jpg" alt="Dr. Karim" class="rounded-circle mb-3" style="width: 120px; height: 120px; object-fit: cover;">
+                        <h3 class="card-title">د. كريم محمد</h3>
+                        <p class="text-muted">Dr. Karim Mohamed</p>
+                        <p class="card-text">
+                            <strong>Spécialité:</strong> Rééducation neurologique<br>
+                            <strong>Expérience:</strong> 10 ans<br>
+                            <strong>Diplômes:</strong> Doctorat en neurologie
+                        </p>
+                        <a href="{% url 'appointments:list' %}" class="btn btn-primary">Prendre RDV</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Produits populaires -->
+    <div class="col-12 mb-5">
+        <div class="mt-5">
+            <h3 class="text-center mb-4">Produits populaires</h3>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4">
+                    <div class="card h-100 text-center border-0 shadow">
+                        <div class="card-body">
+                            <img src="https://cdn.pixabay.com/photo/2017/01/31/13/14/physiotherapy-2025632_1280.png" alt="Bande élastique" style="width: 80px; height: 80px; object-fit: contain;" class="mb-3">
+                            <h4 class="card-title">Bande élastique de résistance</h4>
+                            <p class="card-text">Idéale pour les exercices de rééducation et de renforcement musculaire à domicile.</p>
+                            <span class="badge bg-success">800 DA</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 text-center border-0 shadow">
+                        <div class="card-body">
+                            <img src="https://cdn.pixabay.com/photo/2016/03/31/19/14/medical-1296141_1280.png" alt="Balle de rééducation" style="width: 80px; height: 80px; object-fit: contain;" class="mb-3">
+                            <h4 class="card-title">Balle de rééducation</h4>
+                            <p class="card-text">Permet d'améliorer la mobilité, la force et la coordination des membres.</p>
+                            <span class="badge bg-success">1 200 DA</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 text-center border-0 shadow">
+                        <div class="card-body">
+                            <img src="https://cdn.pixabay.com/photo/2014/12/21/23/50/medicine-579548_1280.png" alt="Tapis de sol" style="width: 80px; height: 80px; object-fit: contain;" class="mb-3">
+                            <h4 class="card-title">Tapis de sol antidérapant</h4>
+                            <p class="card-text">Confortable et sécurisé pour réaliser vos exercices de kinésithérapie à la maison.</p>
+                            <span class="badge bg-success">2 500 DA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Témoignages -->
+    <div class="col-12">
+        <h2 class="text-center mb-4">Ce que disent nos clients</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-4 mb-3">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2922/2922510.png" alt="client1" class="rounded-circle mb-3" style="width: 70px; height: 70px; object-fit: cover;">
+                        <h5 class="card-title mb-1">سارة (Sarah)</h5>
+                        <p class="card-text">« J'ai pris rendez-vous pour ma mère, le kiné est venu à domicile, très professionnel et à l'écoute. Merci Kindom ! »</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2922/2922506.png" alt="client2" class="rounded-circle mb-3" style="width: 70px; height: 70px; object-fit: cover;">
+                        <h5 class="card-title mb-1">محمد (Mohamed)</h5>
+                        <p class="card-text">« J'ai commandé du matériel de rééducation, livraison rapide et produits de qualité. Je recommande vivement ! »</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body text-center">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2922/2922514.png" alt="client3" class="rounded-circle mb-3" style="width: 70px; height: 70px; object-fit: cover;">
+                        <h5 class="card-title mb-1">ليلى (Leïla)</h5>
+                        <p class="card-text">« Les conseils du blog m'ont beaucoup aidée après mon opération. Merci à toute l'équipe Kindom ! »</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 
